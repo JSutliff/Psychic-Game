@@ -1,8 +1,8 @@
-var  wins = 0;
-var  losses = 0;
-var  remainingGuesses = 5;
-var  guessesSoFar = [];
-var  userGuess = [];
+var  wins;
+var  losses;
+var  remainingGuesses;
+var  guessesSoFar;
+var  userGuess;
 var alphabet = 'abcdefghijklmnopqrstuvwxyz';
 alphabet = alphabet.split('');
 
@@ -13,13 +13,16 @@ var randomLetter = function() {
 
 //initialize variables to start values
 var resetStats = function() {
-var  wins = 0;
-var  losses = 0;
-var  remainingGuesses = 5;
-var  guessesSoFar = 0;
-var  userGuess = [];
-var alphabet = 'abcdefghijklmnopqrstuvwxyz';
-alphabet = alphabet.split('');
+  wins = 0;
+  losses = 0;
+  remainingGuesses = 5;
+  guessesSoFar = [];
+  userGuess = [];
+  document.getElementById('wins').textContent = wins;
+  document.getElementById('losses').textContent = losses;
+  document.getElementById('numGuesses').textContent = remainingGuesses;
+  document.getElementById('guessesSoFar').textContent = guessesSoFar;
+
 }
 
 
@@ -28,11 +31,13 @@ alphabet = alphabet.split('');
 resetStats();
 var computerChoice = randomLetter();
 
+
 //while remainingGuesses > 0 
 document.onkeyup = function(event) {
+  var userKey = event.key.toLowerCase();
   if (remainingGuesses > 0) {
-    if (alphabet.includes(event.key.toLowerCase())) {
-      if (computerChoice === event.key.toLowerCase()) {
+    if (alphabet.includes(userKey)) {
+      if (computerChoice === userKey) {
         wins++;
         document.getElementById('wins').textContent = wins;
         remainingGuesses = 5;
@@ -54,6 +59,11 @@ document.onkeyup = function(event) {
     guessesSoFar = [];
   }
 }
+
+document.getElementById('newGame').addEventListener("click", function() {
+  resetStats();
+  
+});
 
 
 //get users choice
