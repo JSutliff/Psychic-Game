@@ -35,10 +35,12 @@ document.onkeyup = function(event) {
       if (computerChoice === event.key.toLowerCase()) {
         wins++;
         document.getElementById('wins').textContent = wins;
+        remainingGuesses = 5;
+        guessesSoFar = [];
       } else {
         remainingGuesses --;
         document.getElementById('numGuesses').textContent = remainingGuesses;
-        guessesSoFar.push(event.key);
+        guessesSoFar.push(event.key.toLowerCase());
         document.getElementById('guessesSoFar').textContent = guessesSoFar;
       }
     } else {
@@ -48,7 +50,8 @@ document.onkeyup = function(event) {
     console.log('You Lose!')
     losses++;
     document.getElementById('losses').textContent = losses;
-
+    remainingGuesses = 5;
+    guessesSoFar = [];
   }
 }
 
