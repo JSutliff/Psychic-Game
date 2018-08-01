@@ -3,6 +3,7 @@ var  losses;
 var  remainingGuesses;
 var  guessesSoFar;
 var  userGuess;
+var computerChoice;
 var alphabet = 'abcdefghijklmnopqrstuvwxyz';
 alphabet = alphabet.split('');
 
@@ -18,6 +19,7 @@ var resetStats = function() {
   remainingGuesses = 5;
   guessesSoFar = [];
   userGuess = [];
+  computerChoice = randomLetter();
   document.getElementById('wins').textContent = wins;
   document.getElementById('losses').textContent = losses;
   document.getElementById('numGuesses').textContent = remainingGuesses;
@@ -29,7 +31,7 @@ var resetStats = function() {
 
 //newGame
 resetStats();
-var computerChoice = randomLetter();
+
 
 
 //while remainingGuesses > 0 
@@ -39,6 +41,7 @@ document.onkeyup = function(event) {
     if (alphabet.includes(userKey)) {
       if (computerChoice === userKey) {
         wins++;
+        alert('You WON!');
         document.getElementById('wins').textContent = wins;
         remainingGuesses = 5;
         guessesSoFar = [];
@@ -49,11 +52,12 @@ document.onkeyup = function(event) {
         document.getElementById('guessesSoFar').textContent = guessesSoFar;
       }
     } else {
-      console.log('invlaid choice')
+      console.log('invlaid choice, try a letter')
     }
   } else {
-    console.log('You Lose!')
+    document.getElementById('guessesSoFar').textContent = guessesSoFar; //<del>
     losses++;
+    alert('You LOST!');
     document.getElementById('losses').textContent = losses;
     remainingGuesses = 5;
     guessesSoFar = [];
