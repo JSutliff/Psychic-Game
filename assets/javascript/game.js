@@ -52,10 +52,10 @@ document.onkeyup = function(event) {
         document.getElementById('guessesSoFar').textContent = guessesSoFar;
       }
     } else {
-      console.log('invlaid choice, try a letter')
+      alert('invlaid choice, try a letter')
     }
   } else {
-    document.getElementById('guessesSoFar').textContent = guessesSoFar; //<del>
+    document.getElementById('guessesSoFar').textContent = guessesSoFar;
     losses++;
     alert('You LOST!');
     document.getElementById('losses').textContent = losses;
