@@ -44,6 +44,7 @@ document.onkeyup = function(event) {
         alert('You WON!');
         document.getElementById('wins').textContent = wins;
         remainingGuesses = 5;
+        computerChoice = randomLetter();
         guessesSoFar = [];
       } else {
         remainingGuesses --;
