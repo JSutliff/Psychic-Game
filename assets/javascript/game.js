@@ -51,8 +51,14 @@ var handleInvalidKey = function() {
     }, 3000);
 }
 
+var isValidKey = function(key) {
+  if (alphabet.includes(key) && (!keyLog.includes(key))) {
+    return true;
+  }
+}
+
 var checkKey = function (userKey) {
- if (alphabet.includes(userKey) && (!keyLog.includes(userKey))) {
+ if (isValidKey(userKey)) {
   if (userKey === computerGuess) {
     wins++;
     handleWin();
