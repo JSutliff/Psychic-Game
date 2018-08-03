@@ -2,8 +2,14 @@
   color: purple;
 }
 
-/* body {
-  background-image: url('../images/psychicReader.jpeg');
+body {
+  background-image: url('../images/vision.jpg');
   background-size: cover;
-  color: white;
-} */
+  color: ;
+}
+
+.container {
+  display: block;
+  width:  45%;
+  float: left;
+}
