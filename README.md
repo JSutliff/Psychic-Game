@@ -16,6 +16,8 @@ generates a random letter and compares it to the key presses of the user.
 <!-- ![image title](path or link to image) -->
 [screen shot of completed assignment](assets/images/screenSHot.png)
 
+
+<img src="assets/images/psychicScreenShot.jpeg">
 # technology used
 <!-- make a list of technology used -->
 <!-- what you used for this web app, like html css -->
