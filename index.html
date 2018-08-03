@@ -4,15 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
+
+  <div class="jumbotron">
+  <h1 class="display-4">The Psychic Test</h1>
+  <p class="lead">Are you psychic?</p>
+  <hr class="my-4">
+  <p>Press a letter key to guess the the random letter in the crystal ball.</p>
+</div>
+
+  <!-- <div class="container">
     <h1>The Psychic Test</h1>
     <h2>Are you psychic?</h2>
     <h3 id="message"></h3>
     <h3>Five chances to guess the random letter in the crystal ball</h3>
-    <h4>Make your guess by pressing a letter key</h4>
+    <h4>Make your guess by pressing a letter key</h4> -->
 
     <div class="scoreInfo">
       <div>Wins: <span id="wins"></span></div>
@@ -23,7 +33,7 @@
     <div class="guesses">Guesses so far: <span id="keyLog"></span> </div>
     <br>
     <!-- <button id="newGame">New Game</button> -->
-  </div>
+  <!-- </div> -->
   <script src="assets/javascript/game.js"></script>
 </body>
 </html>
