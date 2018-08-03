@@ -1,6 +1,6 @@
 <!-- Put the name of the project after the # -->
 <!-- the # means h1  -->
-# Psychic key-press game (Recomended assignment)
+# Psycic key-press game (Recomended assignment)
 
 <!-- Put a description of what the project is -->
 Combining HTML and javascript to build a DOM based game where the computer 
