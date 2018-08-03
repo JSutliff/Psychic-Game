@@ -2,7 +2,6 @@ var  wins = 0;
 var  losses = 0;
 var  remainingGuesses = 5;
 var  keyLog = [];
-var  userGuess;
 var computerGuess;
 var alphabet = 'abcdefghijklmnopqrstuvwxyz';
 alphabet.split('');
@@ -18,7 +17,6 @@ var handleDomUpdate = function() {
   document.getElementById('losses').textContent = losses;
   document.getElementById('guessesRemaining').textContent = remainingGuesses;
   document.getElementById('keyLog').textContent = keyLog.join(' ');
-  // document.getElementById('message').textContent = '';
 }
 
 handleDomUpdate();
