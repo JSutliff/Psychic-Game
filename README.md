@@ -21,6 +21,8 @@ generates a random letter and compares it to the key presses of the user.
 <!-- what you used for this web app, like html css -->
 - HTML5
 - JavaScript
+- Bootstrap
+- CSS3
 
 <!-- 
 1. First ordered list item
