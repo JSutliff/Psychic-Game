@@ -53,7 +53,7 @@ var handleInvalidKey = function() {
     }, 3000);
 }
 
-var isNewKeyEntry = function(key) {
+var isValidKey = function(key) {
   if (alphabet.includes(key) && (!keyLog.includes(userKey))) {
     return true;
   } 
@@ -61,13 +61,13 @@ var isNewKeyEntry = function(key) {
 
 //handle user key
 var checkKey = function (userKey) {
- if (isNewKeyEntry(userKey)) {
+ if (isValidKey(userKey)) {
   if (userKey === computerGuess) {
     wins++;
     handleWin();
     resetGuessVars();
     handleDomUpdate();
-  } else if (isNewKeyEntry(userKey) && remainingGuesses !== 1) {
+  } else if (isValidKey(userKey) && remainingGuesses !== 1) {
      keyLog.push(userKey);
      remainingGuesses--;
      handleDomUpdate();
