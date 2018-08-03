@@ -80,16 +80,14 @@ var checkKey = function (userKey) {
 document.onkeyup = function(event) {
   var userKey = event.key.toLowerCase();
   checkKey(userKey);
-}
+};
 
-// document.getElementById('newGame').addEventListener("click", function() {
-//   wins = 0;
-//   losses = 0;
-//   resetGuessVars();
-//   handleDomUpdate();
-//   }
-
-
+document.getElementById('newGame').addEventListener("click", function() {
+  wins = 0;
+  losses = 0;
+  resetGuessVars();
+  handleDomUpdate();
+});
 
 //generate computerGuess
 
