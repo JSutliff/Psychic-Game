@@ -42,7 +42,6 @@ var handleInvalidKey = function() {
   document.getElementById('message').textContent = `Try pressing a letter!`;
 }
 
-
 var checkKey = function (userKey) {
  if (alphabet.includes(userKey)) {
   if (userKey === computerGuess) {
