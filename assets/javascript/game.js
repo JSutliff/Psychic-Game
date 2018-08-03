@@ -62,7 +62,7 @@ var checkKey = function (userKey) {
     handleWin();
     resetGuessVars();
     handleDomUpdate();
-  } else if (!keyLog.includes(userKey) && remainingGuesses > 0) {
+  } else if (!keyLog.includes(userKey) && remainingGuesses !== 1) {
      keyLog.push(userKey);
      remainingGuesses--;
      handleDomUpdate();
