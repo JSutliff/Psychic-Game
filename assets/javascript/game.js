@@ -28,10 +28,8 @@ var resetGuessVars = function() {
   document.getElementById('guessesRemaining').textContent = remainingGuesses;
 }
 
-//generates first random letter for computerGuess
 resetGuessVars();
 
-//win/loss/invalid
 var handleWin = function() {
   document.getElementById('message').textContent = `You must be a psychic! The secret letter was "${computerGuess}"`;
   setTimeout(function() {
@@ -53,21 +51,14 @@ var handleInvalidKey = function() {
     }, 3000);
 }
 
-var isValidKey = function(key) {
-  if (alphabet.includes(key) && (!keyLog.includes(userKey))) {
-    return true;
-  } 
-}
-
-//handle user key
 var checkKey = function (userKey) {
- if (isValidKey(userKey)) {
+ if (alphabet.includes(userKey) && (!keyLog.includes(userKey))) {
   if (userKey === computerGuess) {
     wins++;
     handleWin();
     resetGuessVars();
     handleDomUpdate();
-  } else if (isValidKey(userKey) && remainingGuesses !== 1) {
+  } else if (!keyLog.includes(userKey) && remainingGuesses !== 1) {
      keyLog.push(userKey);
      remainingGuesses--;
      handleDomUpdate();
