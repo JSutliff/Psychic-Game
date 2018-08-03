@@ -17,6 +17,7 @@ var handleDomUpdate = function() {
   document.getElementById('losses').textContent = losses;
   document.getElementById('guessesRemaining').textContent = remainingGuesses;
   document.getElementById('keyLog').textContent = keyLog.join(' ');
+  return;
 }
 
 handleDomUpdate();
@@ -26,27 +27,28 @@ var resetGuessVars = function() {
   keyLog = [];
   computerGuess = randomLetter();
   document.getElementById('guessesRemaining').textContent = remainingGuesses;
+  return;
 }
 
 resetGuessVars();
 
 var handleWin = function() {
   document.getElementById('message').textContent = `You must be a psychic! The secret letter was "${computerGuess}"`;
-  setTimeout(function() {
+  return setTimeout(function() {
     document.getElementById('message').textContent = ``;
     }, 3000);
 }
 
 var handleLoss = function() {
   document.getElementById('message').textContent = `Your psychic powers aren't very strong! The secret letter was "${computerGuess}"`;
-  setTimeout(function() {
+  return setTimeout(function() {
     document.getElementById('message').textContent = ``;
     }, 3000);
 }
 
 var handleInvalidKey = function() {
   document.getElementById('message').textContent = `Try pressing a letter!`;
-  setTimeout(function() {
+  return setTimeout(function() {
     document.getElementById('message').textContent = ``;
     }, 3000);
 }
@@ -77,11 +79,12 @@ var checkKey = function (userKey) {
  } else {
    handleInvalidKey();
  }
+ return;
 }
  
 document.onkeyup = function(event) {
   var userKey = event.key.toLowerCase();
-  checkKey(userKey);
+  return checkKey(userKey);
 };
 
 document.getElementById('newGame').addEventListener("click", function() {
@@ -89,4 +92,5 @@ document.getElementById('newGame').addEventListener("click", function() {
   losses = 0;
   resetGuessVars();
   handleDomUpdate();
+  return;
 });
