@@ -35,14 +35,14 @@ resetGuessVars();
 console.log(computerGuess);
 
 var handleWin = function() {
-  document.getElementById('message').textContent = `You must be a psychic! The secret letter was ${computerGuess}`;
+  document.getElementById('message').textContent = `You must be a psychic! The secret letter was "${computerGuess}"`;
   setTimeout(function() {
     document.getElementById('message').textContent = ``;
     }, 3000);
 }
 
 var handleLoss = function() {
-  document.getElementById('message').textContent = `Your psychic powers aren't very strong! The secret letter was ${computerGuess}`;
+  document.getElementById('message').textContent = `Your psychic powers aren't very strong! The secret letter was "${computerGuess}"`;
   setTimeout(function() {
     document.getElementById('message').textContent = ``;
     }, 3000);
