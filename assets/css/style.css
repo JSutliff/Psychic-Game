@@ -12,4 +12,15 @@ body {
   display: block;
   width:  45%;
   float: left;
+  
+}
+
+.card {
+  /* margin-top: 10px; */
+  margin-left: 25px;
+  height: 85%;
+}
+
+.card-body .list-group-item {
+  background-color: hsla(346, 75%, 85%, 0.1);
 }

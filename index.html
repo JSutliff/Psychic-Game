@@ -9,11 +9,11 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
+  <!-- <div class="container">
     <h1>The Psychic Test</h1>
     <h2>Are you psychic?</h2>
-    <h3 id="message"></h3>
-    <h3>Five chances to guess the random letter in the crystal ball</h3>
+    <!-- <h3 id="message"></h3> -->
+    <!-- <h3>Five chances to guess the random letter in the crystal ball</h3>
     <h4>Make your guess by pressing a letter key</h4>
 
     <div class="scoreInfo">
@@ -25,7 +25,28 @@
     <div class="guesses">Guesses so far: <span id="keyLog"></span> </div>
     <br>
     <button id="newGame">New Game</button>
+  </div> --> 
+  
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="assets/images/psychicReader.jpeg" alt="Neon Psychic Sign">
+    <div class="card-body">
+      <h5 class="card-title">The Psychic Test</h5>
+      <h3 id="message"></h3>
+      <p class="card-text">Five chances to guess the random letter in the crystal ball</p>
+      <p>Make your guess by pressing a letter key</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Wins: <span id="wins"></span></li>
+      <li class="list-group-item">Losses: <span id="losses"></span></li>
+      <li class="list-group-item">Guesses remaining: <span id="guessesRemaining"></span></li>
+      <li class="list-group-item">Guesses so far: <span id="keyLog"></span></li>
+    </ul>
+    <div class="card-body">
+      <button id='newGame' type="button" class="btn btn-info">Reset Game</button>
+    </div>
   </div>
   <script src="assets/javascript/game.js"></script>
 </body>
 </html>
+
+

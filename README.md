@@ -14,7 +14,7 @@ generates a random letter and compares it to the key presses of the user.
 # Images
 <!-- take a picture of the image and add it into the readme  -->
 <!-- ![image title](path or link to image) -->
-[screen shot of completed assignment](assets/images/screenSHot.png)
+[screen shot of completed assignment](assets/images/screenShot.png)
 
 
 <img src="assets/images/psychicScreenShot.jpeg">
