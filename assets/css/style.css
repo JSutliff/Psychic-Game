@@ -16,11 +16,12 @@ body {
 }
 
 .card {
-  /* margin-top: 10px; */
-  margin-left: 25px;
-  height: 85%;
+  margin-top: 50px;
+  margin-left: 50px;
+  
 }
 
 .card-body .list-group-item {
   background-color: hsla(346, 75%, 85%, 0.1);
 }
+
